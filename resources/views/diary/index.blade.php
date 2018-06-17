@@ -73,43 +73,7 @@
         <h1>ハイスコア</h1>
 
         <div class="container flex-center position-ref full-height">
-
-            <table id="items" class="table table-striped table-light">
-                <thead>
-                <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">ユーザ</th>
-                    <th scope="col">スコア</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr id="item-10">
-                    <td scope="row">1</td>
-                    <td>John, No1(ID: 10)</td>
-                    <td>1,000</td>
-                </tr>
-                <tr id="item-5">
-                    <td scope="row">2</td>
-                    <td>ボブ, No2(ID: 5)</td>
-                    <td>900</td>
-                </tr>
-                <tr id="item-29">
-                    <td scope="row">3</td>
-                    <td>一郎, No3(ID: 29)</td>
-                    <td>900</td>
-                </tr>
-                <tr id="item-12029">
-                    <td scope="row">4</td>
-                    <td>一郎, No3(ID: 12029)</td>
-                    <td>900</td>
-                </tr>
-                <tr id="item-3">
-                    <td scope="row">5</td>
-                    <td>甘栗太郎(ID: 3)</td>
-                    <td>40</td>
-                </tr>
-                </tbody>
-            </table>
+            <diary-list :items='{{ $items }}'></diary-list>
         </div>
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
