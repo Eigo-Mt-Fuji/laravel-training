@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    
     <title>@if (! Request::is('/')){{ $title }} | @endif{{ env('APP_NAME') }}</title>
-
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- Fonts -->
@@ -69,12 +68,9 @@
     </style>
 </head>
 <body>
-    <div id="app">
-        <h1>ハイスコア</h1>
-
-        <div class="container flex-center position-ref full-height">
-            <diary-list :items='{{ $items }}'></diary-list>
-        </div>
+    <h1>ハイスコア</h1>
+    <div id="main" class="container flex-center position-ref full-height">
+      <diary-list :_items='{{ $items }}'></diary-list>
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
